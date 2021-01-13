@@ -32,10 +32,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: constellationdevservice
+  namespace: constellationdevnspace
 spec:
   type: LoadBalancer
   ports:
-  - port: 8082
+  - name: http
+    protocol: TCP
+    port: 8082
     targetPort: 8082
 
         
